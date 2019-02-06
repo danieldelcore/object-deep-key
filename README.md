@@ -1,4 +1,4 @@
-# Object-deep-key
+# object-deep-key
 Safely access and modify deeply nested object properties
 
 ## Installation
