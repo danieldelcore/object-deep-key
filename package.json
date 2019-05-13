@@ -4,8 +4,8 @@
     "description": "Safely access and modify deeply nested object properties",
     "author": "Daniel Del Core",
     "license": "MIT",
-    "main": "./dist/index.js",
-    "types": "./dist/types/index.js",
+    "main": "lib/index.js",
+    "types": "lib/index.d.ts",
     "files": [
         "dist"
     ],
@@ -17,6 +17,7 @@
         "deep",
         "deeply"
     ],
+    "homepage": "https://github.com/danieldelcore/object-deep-key",
     "repository": {
         "type": "git",
         "url": "https://www.github.com/danieldelcore/object-deep-key"
