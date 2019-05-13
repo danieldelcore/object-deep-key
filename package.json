@@ -1,6 +1,6 @@
 {
     "name": "object-deep-key",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "description": "Safely access and modify deeply nested object properties",
     "author": "Daniel Del Core",
     "license": "MIT",
