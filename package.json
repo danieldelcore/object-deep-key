@@ -5,9 +5,9 @@
     "author": "Daniel Del Core",
     "license": "MIT",
     "main": "lib/index.js",
-    "types": "lib/index.d.ts",
+    "typings": "lib/index.d.ts",
     "files": [
-        "dist"
+        "lib"
     ],
     "keywords": [
         "object",
