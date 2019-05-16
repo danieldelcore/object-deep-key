@@ -29,5 +29,5 @@ objectDeepKey(values, 'methods.id').has(); // true
 objectDeepKey(values, 'methods.unknown').has(); // false
 
 objectDeepKey(values, 'methods.id').set('3');
-objectDeepKey(values, 'methods.stuff[0]').set(200);
+objectDeepKey(values, 'methods.options[0]').set(200);
 ```
