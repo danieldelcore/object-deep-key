@@ -1,41 +1,41 @@
 {
-    "name": "object-deep-key",
-    "version": "1.1.4",
-    "description": "Safely access and modify deeply nested object properties",
-    "author": "Daniel Del Core",
-    "license": "MIT",
-    "main": "lib/index.js",
-    "typings": "lib/index.d.ts",
-    "files": [
-        "lib"
-    ],
-    "keywords": [
-        "object",
-        "nested",
-        "key",
-        "formik",
-        "deep",
-        "deeply"
-    ],
-    "homepage": "https://github.com/danieldelcore/object-deep-key",
-    "repository": {
-        "type": "git",
-        "url": "https://www.github.com/danieldelcore/object-deep-key"
-    },
-    "scripts": {
-        "build": "tsc",
-        "postversion": "git push && git push --tags",
-        "preversion": "npm run test",
-        "test:coverage": "npm run test -- --coverage",
-        "test:watch": "npm run test -- --watch",
-        "test": "jest --config jest-config.js",
-        "version": "npm run build"
-    },
-    "dependencies": {},
-    "devDependencies": {
-        "@types/jest": "^23.3.10",
-        "jest": "^23.6.0",
-        "ts-jest": "^23.10.5",
-        "typescript": "^3.2.2"
-    }
+  "name": "object-deep-key",
+  "version": "1.1.2",
+  "description": "Safely access and modify deeply nested object properties",
+  "author": "Daniel Del Core",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "object",
+    "nested",
+    "key",
+    "formik",
+    "deep",
+    "deeply"
+  ],
+  "homepage": "https://github.com/danieldelcore/object-deep-key",
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/danieldelcore/object-deep-key"
+  },
+  "scripts": {
+    "build": "tsc --build",
+    "postversion": "git push && git push --tags",
+    "preversion": "npm run test",
+    "test:coverage": "npm run test -- --coverage",
+    "test:watch": "npm run test -- --watch",
+    "test": "jest --config jest-config.js",
+    "version": "npm run build"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^23.3.10",
+    "jest": "^23.6.0",
+    "ts-jest": "^23.10.5",
+    "typescript": "^3.2.2"
+  }
 }
