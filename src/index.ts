@@ -7,6 +7,9 @@ function objectDeepKey<DeepObject extends Record<string, any> = {}>(
   object: DeepObject,
   key: string
 ) {
+  if (object === Object.prototype)
+    throw `Restricted modifying Object Prototype`;
+
   const get = () => {
     if (!has()) {
       throw `Property at path ${key} was not found`;
@@ -35,7 +38,7 @@ function objectDeepKey<DeepObject extends Record<string, any> = {}>(
     if (!has()) {
       throw `Property at path ${key} was not found`;
     }
-
+    
     const path = parsePath(key);
     let current = object;
 
