@@ -35,10 +35,6 @@ function objectDeepKey<DeepObject extends Record<string, any> = {}>(
   };
 
   const set = (value: any): void => {
-    if (!has()) {
-      throw `Property at path ${key} was not found`;
-    }
-    
     const path = parsePath(key);
     let current = object;
 
@@ -46,9 +42,23 @@ function objectDeepKey<DeepObject extends Record<string, any> = {}>(
       const property = path[i];
 
       if (i === path.length - 1) {
-        //@ts-ignore
-        current[property] = value;
+        if (!/^\d+$/.test(property)) {
+          Object.defineProperty(current, property, {
+            configurable: true,
+            enumerable: true,
+            writable: true,
+            value,
+          });
+        } else {
+          //@ts-ignore
+          current[property] = value;
+        }
       } else {
+        if (!current.hasOwnProperty(property)) {
+          // @ts-ignore
+          current[property] = !/^\d+$/.test(property) ? [] : {};
+        }
+
         current = current[property];
       }
     }
